@@ -4,13 +4,15 @@ do
 FLIP=$(($(($RANDOM%10))%2))
 
 
-# if heads, use cowsay to present your splash 
+# if heads, do the command 
 if [ $FLIP -eq 1 ]
 then
-# start with some wisdom
-ping -c 5 -i .5 google.com | lolcat
+# ping google
+ping -c 6 -i .5 google.com | lolcat;
+sleep .9
 else
-# or start with some other msg
+#clear out the text
+sleep .2
 clear
 fi
 done
